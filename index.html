@@ -1,971 +1,870 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <title>CSRGO Services – Static Sites, Shopify, Apps &amp; Digital Branding</title>
-    <meta
-      name="description"
-      content="Smart, ultra-fast, serverless websites & digital services including Shopify stores, full apps, video editing, branding & more."
-    />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://services.csrgo.com/" />
-    <meta
-      property="og:title"
-      content="CSRGO Services – Static Sites, Shopify, Apps &amp; Digital Branding"
-    />
-    <meta
-      property="og:description"
-      content="Smart, ultra-fast, serverless websites & digital services including Shopify stores, full apps, video editing, branding & more."
-    />
-    <meta property="og:image" content="/assets/cover.webp" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CSRGO Services – Static Sites, Shopify, Apps &amp; Digital Branding</title>
+  <meta name="description"
+    content="Smart, ultra-fast, serverless websites & digital services including Shopify stores, full apps, video editing, branding & more." />
 
-    <!-- Favicons & metadata -->
-    <meta name="theme-color" content="#0ea5e9" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./logo.png" />
-    <link rel="icon" type="image/svg+xml" href="./assets/logo.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./logo.png" />
-    <link rel="manifest" href="./site.webmanifest" />
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://services.csrgo.com/" />
+  <meta property="og:title" content="CSRGO Services – Static Sites, Shopify, Apps &amp; Digital Branding" />
+  <meta property="og:description"
+    content="Smart, ultra-fast, serverless websites & digital services including Shopify stores, full apps, video editing, branding & more." />
+  <meta property="og:image" content="/assets/cover.webp" />
 
-    <!-- TailwindCSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              navy: '#020617',
-              slate: '#1e293b',
-              sky: '#38bdf8',
-              lightbg: '#f1f5f9'
-            },
-            fontFamily: {
-              sans: ['system-ui', 'ui-sans-serif', 'Inter', 'system-ui', 'sans-serif']
-            },
-            boxShadow: {
-              elevated: '0 22px 60px rgba(15,23,42,0.35)'
-            }
+  <!-- Favicons & metadata -->
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#020617',
+            slate: '#1e293b',
+            sky: '#38bdf8',
+            lightbg: '#f1f5f9'
+          },
+          fontFamily: {
+            sans: ['system-ui', 'ui-sans-serif', 'Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            elevated: '0 22px 60px rgba(15,23,42,0.35)'
           }
         }
-      };
-    </script>
+      }
+    };
+  </script>
 
-    <!-- Lucide Icons CDN -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
 
-  <body class="bg-slate-50 text-slate-900 font-sans antialiased scroll-smooth">
-    <!-- Page wrapper -->
-    <div class="min-h-screen flex flex-col">
-      <!-- Navigation -->
-      <header
-        class="site-header fixed top-0 inset-x-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl"
-      >
-        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex items-center justify-between h-16">
-            <!-- Logo / Brand -->
-            <a href="#top" class="flex items-center gap-3 group">
-              <div
-                class="h-9 w-9 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-sky-300 transition-all"
-              >
-                <img
-                  src="./logo.png"
-                  alt="CSRGO Services Logo"
-                  class="h-6 w-6 object-contain"
-                />
-              </div>
-              <div class="flex flex-col leading-tight">
-                <span class="text-sm font-semibold tracking-wide text-slate-900">
-                  CSRGO <span class="text-sky-500">Services</span>
-                </span>
-                <span class="text-[11px] text-slate-500">
-                  Smart, fast &amp; zero-cost digital solutions
-                </span>
-              </div>
-            </a>
-
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex items-center gap-8 text-sm">
-              <a href="#services" class="nav-link">Services</a>
-              <a href="#why" class="nav-link">Why me</a>
-              <a href="#process" class="nav-link">Process</a>
-              <a href="#contact" class="nav-link">Contact</a>
-            </div>
-
-            <!-- Mobile menu button -->
-            <button
-              id="mobile-menu-toggle"
-              class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-300 bg-white p-2 text-slate-700 hover:border-sky-500/70 hover:text-sky-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition"
-              aria-label="Toggle navigation"
-            >
-              <i data-lucide="menu" class="w-5 h-5"></i>
-            </button>
-          </div>
-
-          <!-- Mobile Nav -->
-          <div
-            id="mobile-menu"
-            class="md:hidden hidden origin-top scale-y-0 opacity-0 pointer-events-none transform transition-all duration-200 ease-out"
-          >
-            <div class="pb-4 space-y-2 text-sm">
-              <a href="#services" class="mobile-nav-link">Services</a>
-              <a href="#why" class="mobile-nav-link">Why me</a>
-              <a href="#process" class="mobile-nav-link">Process</a>
-              <a href="#contact" class="mobile-nav-link">Contact</a>
-            </div>
-          </div>
-        </nav>
-      </header>
-
-      <!-- Main content -->
-      <main id="top" class="flex-1 pt-16 md:pt-20 overflow-x-hidden">
-        <!-- Hero -->
-        <section
-          id="hero"
-          class="relative border-b border-slate-200 bg-gradient-to-b from-white via-slate-50 to-slate-100/90 min-h-screen flex items-start"
-        >
-          <div class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-sky-100/40 to-transparent pointer-events-none"></div>
-
-          <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-            <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16 items-center">
-              <!-- Left / Content -->
-              <div
-                class="space-y-8 fade-in-up"
-                data-animate
-              >
-                <div class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] text-sky-700 shadow-sm shadow-sky-100">
-                  <i data-lucide="server" class="w-3.5 h-3.5"></i>
-                  <span>Serverless • Zero monthly hosting • Static first</span>
-                </div>
-
-                <div class="space-y-4">
-                  <h1
-                    class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 leading-tight"
-                  >
-                    Smart, Fast &amp;
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500">
-                      Zero-Cost
-                    </span>
-                    Digital Solutions
-                  </h1>
-                  <p class="text-sm sm:text-base text-slate-600 max-w-xl">
-                    I help individuals and businesses build ultra-fast static sites, Shopify
-                    stores, automations, full apps, videos, branding &amp; more — fully
-                    optimized, secure, and deployed on zero-cost infrastructure.
-                  </p>
-                </div>
-
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                  <a
-                    href="#services"
-                    class="hero-primary-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <i data-lucide="sparkles" class="w-4 h-4"></i>
-                    <span>View Services</span>
-                  </a>
-                  <a
-                    href="#contact"
-                    class="hero-primary-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-                  >
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                    <span>Contact Me</span>
-                  </a>
-                </div>
-
-                <div class="flex flex-wrap items-center gap-4 pt-2 text-[11px] text-slate-500">
-                  <div class="inline-flex items-center gap-2">
-                    <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-500"></i>
-                    <span>Ultra-fast static hosting (GitHub Pages, Netlify, Cloudflare)</span>
-                  </div>
-                  <div class="inline-flex items-center gap-2">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i>
-                    <span>Secure by design • Best practices built-in</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Right / Illustration -->
-              <div
-                class="relative fade-in-up delay-150"
-                data-animate
-              >
-                <div
-                  class="hero-code-panel relative rounded-3xl bg-slate-950 text-slate-100 shadow-elevated border border-slate-800 overflow-hidden"
-                >
-                  <div class="absolute inset-0 hero-code-gradient pointer-events-none"></div>
-                  <div class="relative p-4 sm:p-5 space-y-3">
-                    <!-- Window header -->
-                    <div class="flex items-center justify-between">
-                      <div class="flex items-center gap-1.5">
-                        <span class="h-2 w-2 rounded-full bg-rose-500/80"></span>
-                        <span class="h-2 w-2 rounded-full bg-amber-400/80"></span>
-                        <span class="h-2 w-2 rounded-full bg-emerald-400/80"></span>
-                      </div>
-                      <div class="text-[10px] px-2 py-1 rounded-full bg-slate-900/90 text-slate-100 flex items-center gap-1 hero-code-tab">
-                        <i data-lucide="code-2" class="w-3 h-3 text-sky-300"></i>
-                        <span>services.csrgo.com</span>
-                      </div>
-                    </div>
-
-                    <!-- Code-like content -->
-                    <div class="rounded-2xl bg-slate-900/70 border border-slate-800 px-3 py-3 text-[11px] font-mono leading-relaxed space-y-1.5 hero-code-header">
-                      <div class="flex items-center gap-2 text-sky-300 mb-1">
-                        <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
-                        <span>// static, secure, automated</span>
-                      </div>
-                      <p><span class="text-sky-300">const</span> stack = [<span class="text-black-300">'Static'</span>, <span class="text-black-300">'Shopify'</span>, <span class="text-black-300">'Apps'</span>]</p>
-                      <p><span class="text-sky-300">const</span> hosting = <span class="text-black-300">'ZeroCost'</span></p>
-                      <p><span class="text-sky-300">const</span> metrics = &#123; perf: <span class="text-black-300">99</span>, seo: <span class="text-black-300">100</span>, security: <span class="text-black-300">'hardened'</span> &#125;</p>
-                      <p class="pt-1"><span class="text-sky-300">deploy</span>(stack, hosting, metrics)</p>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-2 text-[10px]">
-                      <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
-                        <div class="flex items-center gap-1.5 text-sky-300">
-                          <i data-lucide="zap" class="w-3 h-3"></i>
-                          <span>Performance</span>
-                        </div>
-                        <p class="text-slate-300">Static + CDN + image budgets.</p>
-                      </div>
-                      <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
-                        <div class="flex items-center gap-1.5 text-black-300">
-                          <i data-lucide="shield-check" class="w-3 h-3"></i>
-                          <span>Security</span>
-                        </div>
-                        <p class="text-slate-300">HTTPS, serverless, minimal surface.</p>
-                      </div>
-                      <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
-                        <div class="flex items-center gap-1.5 text-sky-200">
-                          <i data-lucide="git-branch" class="w-3 h-3"></i>
-                          <span>Workflow</span>
-                        </div>
-                        <p class="text-slate-300">Git-based, CI-friendly deployments.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Services -->
-        <section id="services" class="py-16 sm:py-20 bg-white border-b border-slate-200">
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
-              <div class="space-y-3 fade-in-up" data-animate>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
-                  Services
-                </p>
-                <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
-                  Everything from static sites to full-stack apps &amp; branding.
-                </h2>
-                <p class="text-sm text-slate-600 max-w-2xl">
-                  Choose exactly what you need: ultra-fast static websites, conversion-focused
-                  Shopify stores, robust applications, social presence, and premium design &
-                  editing — all aligned under one strategy.
-                </p>
-              </div>
-              <div class="fade-in-up delay-75" data-animate>
-                <div class="inline-flex items-center gap-2 rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-2 text-[11px] text-slate-200 shadow-lg/40">
-                  <i data-lucide="clock-3" class="w-3.5 h-3.5 text-sky-400"></i>
-                  <span>Clear scope, transparent timelines, and honest communication.</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Services Grid -->
-            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
-              <!-- Static Website Services -->
-              <article class="service-card fade-in-up" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Static Website Services
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        Blazing fast, secure &amp; zero-cost static sites.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>Portfolio site creation</li>
-                  <li>Landing page development</li>
-                  <li>Blog site with Hugo + GitHub Pages + Netlify CMS</li>
-                  <li>Serverless, scalable, secure, zero-cost hosting setup</li>
-                </ul>
-                <button class="service-cta" data-service="Static Website Services">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-
-              <!-- Shopify Store Services -->
-              <article class="service-card fade-in-up delay-50" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="shopping-bag" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Shopify Store Services
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        Launch or optimize your e-commerce with confidence.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>Shopify store setup &amp; theme configuration</li>
-                  <li>ROAS-focused Google, Facebook, Instagram integrations</li>
-                  <li>Complete automations &amp; flows</li>
-                  <li>Payment gateway setup &amp; testing</li>
-                  <li>Product upload templates &amp; organization</li>
-                </ul>
-                <button class="service-cta" data-service="Shopify Store Services">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-
-              <!-- Full Application Development -->
-              <article class="service-card fade-in-up delay-100" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="cpu" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Full Application Development
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        From MVP to production-ready full-stack applications.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>Full frontend development (SPA / static-first)</li>
-                  <li>Backend APIs &amp; serverless functions</li>
-                  <li>Database design &amp; setup</li>
-                  <li>Deployment to modern cloud providers</li>
-                  <li>CI/CD guidance &amp; automation</li>
-                </ul>
-                <button class="service-cta" data-service="Full Application Development">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-
-              <!-- Application Maintenance -->
-              <article class="service-card fade-in-up" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="wrench" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Application Maintenance
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        Keep things running smoothly and always improving.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>Enhancements &amp; new feature development</li>
-                  <li>Bug fixes, refactors &amp; stability work</li>
-                  <li>UI/UX improvements &amp; design refreshes</li>
-                  <li>SEO &amp; performance optimization</li>
-                </ul>
-                <button class="service-cta" data-service="Application Maintenance">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-
-              <!-- Social Media Services -->
-              <article class="service-card fade-in-up delay-50" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="share-2" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Social Media Services
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        Build a consistent and professional online presence.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>YouTube, Instagram &amp; Facebook setup</li>
-                  <li>Branding &amp; channel optimization</li>
-                  <li>SEO for videos &amp; social profiles</li>
-                  <li>Content pillars &amp; posting guidance</li>
-                </ul>
-                <button class="service-cta" data-service="Social Media Services">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-
-              <!-- Design & Editing Services -->
-              <article class="service-card fade-in-up delay-100" data-animate>
-                <div class="flex items-start justify-between gap-3 mb-3">
-                  <div class="flex items-center gap-3">
-                    <span class="icon-pill">
-                      <i data-lucide="pen-tool" class="w-4 h-4"></i>
-                    </span>
-                    <div>
-                      <h3 class="text-sm font-semibold text-slate-50">
-                        Design &amp; Editing Services
-                      </h3>
-                      <p class="text-[11px] text-slate-400">
-                        Visuals that feel modern, sharp &amp; on-brand.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <ul class="service-list">
-                  <li>Video &amp; reels editing</li>
-                  <li>Thumbnails, posters &amp; social creatives</li>
-                  <li>Logos, business cards &amp; print assets</li>
-                  <li>Kids custom story books</li>
-                  <li>Digital brand kits &amp; guidelines</li>
-                </ul>
-                <button class="service-cta" data-service="Design & Editing Services">
-                  <span>Contact for this service</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </button>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <!-- Why Choose Me -->
-        <section
-          id="why"
-          class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200"
-        >
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 items-center">
-              <div class="space-y-4 fade-in-up" data-animate>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
-                  Why choose CSRGO
-                </p>
-                <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
-                  One partner for strategy, design, development &amp; content.
-                </h2>
-                <p class="text-sm text-slate-600">
-                  You don’t just get “a website” or “a video edit”. You get a systems thinker who
-                  understands platforms, automation, performance and storytelling — and stitches
-                  them together into a consistent digital presence.
-                </p>
-                <div class="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
-                  <span class="inline-flex items-center gap-1.5">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-400"></i>
-                    Tailored, not template-only.
-                  </span>
-                  <span class="inline-flex items-center gap-1.5">
-                    <i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-400"></i>
-                    Focused on long-term impact.
-                  </span>
-                </div>
-              </div>
-
-              <div class="grid sm:grid-cols-2 gap-4 fade-in-up delay-75" data-animate>
-                <div class="why-card">
-                  <div class="why-icon">
-                    <i data-lucide="cloud-lightning" class="w-4 h-4"></i>
-                  </div>
-                  <h3>100% serverless &amp; zero-cost hosting</h3>
-                  <p>
-                    Architected on GitHub Pages, Netlify, Cloudflare and other serverless platforms
-                    — so your infrastructure bill stays at zero while performance stays high.
-                  </p>
-                </div>
-                <div class="why-card">
-                  <div class="why-icon">
-                    <i data-lucide="zap" class="w-4 h-4"></i>
-                  </div>
-                  <h3>Ultra-fast optimized static sites</h3>
-                  <p>
-                    Static-first, CDN-backed deployments with smart image loading, caching and
-                    minimal JavaScript so your pages feel instant on mobile and desktop.
-                  </p>
-                </div>
-                <div class="why-card">
-                  <div class="why-icon">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i>
-                  </div>
-                  <h3>Secure by design</h3>
-                  <p>
-                    Fewer moving parts, hardened defaults, HTTPS everywhere and best practices
-                    baked in — reducing attack surface and ongoing maintenance.
-                  </p>
-                </div>
-                <div class="why-card">
-                  <div class="why-icon">
-                    <i data-lucide="layers" class="w-4 h-4"></i>
-                  </div>
-                  <h3>Custom apps &amp; branding in sync</h3>
-                  <p>
-                    Apps, sites, emails, videos and social profiles feel like one unified brand —
-                    not a patchwork of vendors and styles.
-                  </p>
-                </div>
-                <div class="why-card sm:col-span-2">
-                  <div class="why-icon">
-                    <i data-lucide="palette" class="w-4 h-4"></i>
-                  </div>
-                  <h3>Branding + Design + Social media solutions</h3>
-                  <p>
-                    Visual identity, content guidelines, thumbnails, reels, posts and landing pages
-                    all share the same voice, colors and energy — so you look consistent everywhere.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Process -->
-        <section
-          id="process"
-          class="py-16 sm:py-20 bg-white border-b border-slate-200"
-        >
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
-              <div class="space-y-3 fade-in-up" data-animate>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
-                  Process
-                </p>
-                <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
-                  A simple, transparent workflow from idea to launch.
-                </h2>
-                <p class="text-sm text-slate-600 max-w-2xl">
-                  Clear check-ins, visual previews and honest recommendations at every stage. You
-                  always know what’s happening and what’s next.
-                </p>
-              </div>
-            </div>
-
-            <!-- Stepper -->
+<body class="bg-slate-50 text-slate-900 font-sans antialiased scroll-smooth">
+  <!-- Page wrapper -->
+  <div class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <header class="site-header fixed top-0 inset-x-0 z-40 border-b border-slate-200/70 bg-white/80 backdrop-blur-xl">
+      <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo / Brand -->
+          <a href="#top" class="flex items-center gap-3 group">
             <div
-              class="relative fade-in-up"
-              data-animate
-            >
-              <div class="hidden md:grid grid-cols-6 gap-5 process-steps">
-                <!-- Horizontal stepper for larger screens -->
-                <!-- Each step -->
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>1</span>
-                  </div>
-                  <h3>Share your requirements</h3>
-                  <p>
-                    We clarify your goals, target audience, platforms and success metrics in simple
-                    language — no tech jargon required.
-                  </p>
-                </div>
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>2</span>
-                  </div>
-                  <h3>I plan the structure</h3>
-                  <p>
-                    I draft site maps, flows, integrations and a realistic timeline so you know what
-                    we’re building and how it all fits together.
-                  </p>
-                </div>
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>3</span>
-                  </div>
-                  <h3>Development starts</h3>
-                  <p>
-                    Design, development and automation work in short, focused cycles — with regular
-                    previews you can click and feel.
-                  </p>
-                </div>
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>4</span>
-                  </div>
-                  <h3>Review &amp; improvements</h3>
-                  <p>
-                    We walk through everything together, polish copy &amp; visuals, and refine flows
-                    until they feel right for your audience.
-                  </p>
-                </div>
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>5</span>
-                  </div>
-                  <h3>Deployment</h3>
-                  <p>
-                    Your site or app ships to secure, fast, zero-cost infrastructure with custom
-                    domains, analytics and SEO basics configured.
-                  </p>
-                </div>
-                <div class="step-card">
-                  <div class="step-icon">
-                    <span>6</span>
-                  </div>
-                  <h3>Ongoing support (optional)</h3>
-                  <p>
-                    Choose a light-touch support plan for updates, experiments, new features and
-                    content as your brand grows.
-                  </p>
-                </div>
+              class="h-9 w-9 rounded-xl border border-slate-200 bg-slate-50 flex items-center justify-center shadow-sm group-hover:shadow-md group-hover:border-sky-300 transition-all">
+              <img src="./logo.png" alt="CSRGO Services Logo" class="h-6 w-6 object-contain" />
+            </div>
+            <div class="flex flex-col leading-tight">
+              <span class="text-sm font-semibold tracking-wide text-slate-900">
+                CSRGO <span class="text-sky-500">Services</span>
+              </span>
+              <span class="text-[11px] text-slate-500">
+                Smart, fast &amp; zero-cost digital solutions
+              </span>
+            </div>
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center gap-8 text-sm">
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#why" class="nav-link">Why me</a>
+            <a href="#process" class="nav-link">Process</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-toggle"
+            class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-300 bg-white p-2 text-slate-700 hover:border-sky-500/70 hover:text-sky-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition"
+            aria-label="Toggle navigation">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu"
+          class="md:hidden hidden origin-top scale-y-0 opacity-0 pointer-events-none transform transition-all duration-200 ease-out">
+          <div class="pb-4 space-y-2 text-sm">
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#why" class="mobile-nav-link">Why me</a>
+            <a href="#process" class="mobile-nav-link">Process</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="top" class="flex-1 pt-16 md:pt-20 overflow-x-hidden">
+      <!-- Hero -->
+      <section id="hero"
+        class="relative border-b border-slate-200 bg-gradient-to-b from-white via-slate-50 to-slate-100/90 min-h-screen flex items-start">
+        <div
+          class="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-sky-100/40 to-transparent pointer-events-none">
+        </div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16 items-center">
+            <!-- Left / Content -->
+            <div class="space-y-8 fade-in-up" data-animate>
+              <div
+                class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-[11px] text-sky-700 shadow-sm shadow-sky-100">
+                <i data-lucide="server" class="w-3.5 h-3.5"></i>
+                <span>Serverless • Zero monthly hosting • Static first</span>
               </div>
 
-              <!-- Vertical stepper for mobile -->
-              <div class="grid gap-4 md:hidden process-steps-vertical">
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>1</span>
-                  </div>
-                  <div>
-                    <h3>Share your requirements</h3>
-                    <p>
-                      We clarify your goals, audience, platforms and success metrics — simple, clear
-                      and focused.
-                    </p>
-                  </div>
+              <div class="space-y-4">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-slate-900 leading-tight">
+                  Smart, Fast &amp;
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-sky-300 to-sky-500">
+                    Zero-Cost
+                  </span>
+                  Digital Solutions
+                </h1>
+                <p class="text-sm sm:text-base text-slate-600 max-w-xl">
+                  I help individuals and businesses build ultra-fast static sites, Shopify
+                  stores, automations, full apps, videos, branding &amp; more — fully
+                  optimized, secure, and deployed on zero-cost infrastructure.
+                </p>
+              </div>
+
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <a href="#services"
+                  class="hero-primary-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  <span>View Services</span>
+                </a>
+                <a href="#contact"
+                  class="hero-primary-btn focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                  <span>Contact Me</span>
+                </a>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-4 pt-2 text-[11px] text-slate-500">
+                <div class="inline-flex items-center gap-2">
+                  <i data-lucide="zap" class="w-3.5 h-3.5 text-sky-500"></i>
+                  <span>Ultra-fast static hosting (GitHub Pages, Netlify, Cloudflare)</span>
                 </div>
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>2</span>
-                  </div>
-                  <div>
-                    <h3>I plan the structure</h3>
-                    <p>
-                      Site map, tech stack, automations and timeline are mapped so we both know the
-                      path forward.
-                    </p>
-                  </div>
-                </div>
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>3</span>
-                  </div>
-                  <div>
-                    <h3>Development starts</h3>
-                    <p>
-                      Design &amp; build in iterative steps with real previews you can review and
-                      comment on.
-                    </p>
-                  </div>
-                </div>
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>4</span>
-                  </div>
-                  <div>
-                    <h3>Review &amp; improvements</h3>
-                    <p>
-                      We refine copy, flows, animations and performance until it feels right.
-                    </p>
-                  </div>
-                </div>
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>5</span>
-                  </div>
-                  <div>
-                    <h3>Deployment</h3>
-                    <p>
-                      Everything is launched to secure, zero-cost hosting with your domain and
-                      tracking set up.
-                    </p>
-                  </div>
-                </div>
-                <div class="step-card-vertical">
-                  <div class="step-icon">
-                    <span>6</span>
-                  </div>
-                  <div>
-                    <h3>Ongoing support (optional)</h3>
-                    <p>
-                      Flexible support for tweaks, new ideas, and upcoming campaigns or launches.
-                    </p>
-                  </div>
+                <div class="inline-flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i>
+                  <span>Secure by design • Best practices built-in</span>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        <!-- Contact -->
-        <section
-          id="contact"
-          class="py-16 sm:py-20 bg-white border-b border-slate-200"
-        >
-          <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10 lg:gap-14 items-center">
-              <div class="space-y-4 fade-in-up" data-animate>
-                <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
-                  Contact
-                </p>
-                <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
-                  Tell me what you’re building — I’ll reply with a simple plan.
-                </h2>
-                <p class="text-sm text-slate-600 max-w-xl">
-                  Share a quick overview of your idea, current setup (if any), and timelines. I’ll
-                  respond with a clear path, suggested stack and rough estimate — no obligation.
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div class="contact-highlight">
-                    <div class="contact-icon">
-                      <i data-lucide="check-circle-2" class="w-4 h-4"></i>
-                    </div>
-                    <div>
-                      <p>Free high-level audit</p>
-                      <span>Already have a site or store? I can review it first.</span>
-                    </div>
-                  </div>
-                  <div class="contact-highlight">
-                    <div class="contact-icon">
-                      <i data-lucide="message-circle" class="w-4 h-4"></i>
-                    </div>
-                    <div>
-                      <p>Flexible collaboration</p>
-                      <span>Project-based, retainers or one-time fixes.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Contact form -->
+            <!-- Right / Illustration -->
+            <div class="relative fade-in-up delay-150" data-animate>
               <div
-                class="fade-in-up delay-75"
-                data-animate
-              >
-                <!-- Success message (hidden by default) -->
-                <div
-                  id="form-success"
-                  class="contact-form-success hidden rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-lg text-center"
-                >
-                  <div class="success-icon-wrapper mb-4">
-                    <div class="success-icon">
-                      <i data-lucide="check-circle-2" class="w-12 h-12"></i>
+                class="hero-code-panel relative rounded-3xl bg-slate-950 text-slate-100 shadow-elevated border border-slate-800 overflow-hidden">
+                <div class="absolute inset-0 hero-code-gradient pointer-events-none"></div>
+                <div class="relative p-4 sm:p-5 space-y-3">
+                  <!-- Window header -->
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-1.5">
+                      <span class="h-2 w-2 rounded-full bg-rose-500/80"></span>
+                      <span class="h-2 w-2 rounded-full bg-amber-400/80"></span>
+                      <span class="h-2 w-2 rounded-full bg-emerald-400/80"></span>
                     </div>
-                  </div>
-                  <h3 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-2">
-                    Message sent successfully!
-                  </h3>
-                  <p class="text-sm text-slate-600 mb-4 max-w-md mx-auto">
-                    Thank you for reaching out. I've received your message and will get back to you within 24 hours.
-                  </p>
-                  <div class="flex items-center justify-center gap-2 text-xs text-slate-500">
-                    <i data-lucide="clock" class="w-4 h-4"></i>
-                    <span>We typically respond within 24 hours</span>
-                  </div>
-                </div>
-
-                <form
-                  id="contact-form"
-                  action="https://formsubmit.co/ajax/contact.csrgo@gmail.com"
-                  method="POST"
-                  class="contact-form rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-lg space-y-4"
-                >
-                  <!-- FormSubmit config -->
-                  <input type="hidden" name="_captcha" value="false" />
-                  <input
-                    type="hidden"
-                    name="_subject"
-                    value="New enquiry from CSRGO Services website"
-                  />
-                  <input
-                    type="hidden"
-                    name="_template"
-                    value="table"
-                  />
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value=""
-                  />
-
-                  <div class="flex items-center justify-between mb-1">
-                    <h3 class="text-sm font-semibold text-slate-900">
-                      Send a message
-                    </h3>
-                    <span class="inline-flex items-center gap-1 text-[11px] text-slate-500">
-                      <i data-lucide="shield" class="w-3.5 h-3.5 text-sky-500"></i>
-                      <span>Secure &amp; spam-protected</span>
-                    </span>
-                  </div>
-                  <div class="email-alternative rounded-xl border border-slate-200 bg-slate-50/50 p-3 flex items-center justify-between gap-3">
-                    <div class="flex items-center gap-2">
-                      <div class="email-icon-small">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                      </div>
-                      <div>
-                        <p class="text-[11px] font-medium text-slate-700">Prefer email?</p>
-                        <p class="text-[10px] text-slate-500">Write to us directly</p>
-                      </div>
-                    </div>
-                    <a
-                      href="mailto:contact.csrgo@gmail.com?subject=Enquiry from CSRGO Services"
-                      class="email-link inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-500 transition"
-                      rel="noopener noreferrer"
-                    >
-                      <span>contact.csrgo@gmail.com</span>
-                      <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                    </a>
-                  </div>
-
-                  <div class="grid sm:grid-cols-2 gap-3">
-                    <div>
-                      <label for="name" class="field-label">Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        class="field-input"
-                        placeholder="How should I address you?"
-                      />
-                    </div>
-                    <div>
-                      <label for="email" class="field-label">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        class="field-input"
-                        placeholder="you@example.com"
-                      />
+                    <div
+                      class="text-[10px] px-2 py-1 rounded-full bg-slate-900/90 text-slate-100 flex items-center gap-1 hero-code-tab">
+                      <i data-lucide="code-2" class="w-3 h-3 text-sky-300"></i>
+                      <span>services.csrgo.com</span>
                     </div>
                   </div>
 
-                  <div>
-                    <label for="phone" class="field-label">Phone (optional)</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      class="field-input"
-                      placeholder="+1 555 000 0000"
-                    />
-                  </div>
-
-                  <div>
-                    <label for="message" class="field-label">Project / message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="4"
-                      required
-                      class="field-input resize-none"
-                      placeholder="Tell me about your site, store, app or content needs..."
-                    ></textarea>
-                  </div>
-
-                  <!-- Dynamic: service pulled from 'Contact for this service' buttons -->
-                  <input
-                    type="hidden"
-                    id="service-field"
-                    name="service"
-                    value="General enquiry"
-                  />
-
+                  <!-- Code-like content -->
                   <div
-                    id="form-status"
-                    class="hidden text-[11px] rounded-2xl px-3 py-2 mt-1"
-                    role="status"
-                    aria-live="polite"
-                  ></div>
+                    class="rounded-2xl bg-slate-900/70 border border-slate-800 px-3 py-3 text-[11px] font-mono leading-relaxed space-y-1.5 hero-code-header">
+                    <div class="flex items-center gap-2 text-sky-300 mb-1">
+                      <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+                      <span>// static, secure, automated</span>
+                    </div>
+                    <p><span class="text-sky-300">const</span> stack = [<span class="text-black-300">'Static'</span>,
+                      <span class="text-black-300">'Shopify'</span>, <span class="text-black-300">'Apps'</span>]</p>
+                    <p><span class="text-sky-300">const</span> hosting = <span class="text-black-300">'ZeroCost'</span>
+                    </p>
+                    <p><span class="text-sky-300">const</span> metrics = &#123; perf: <span
+                        class="text-black-300">99</span>, seo: <span class="text-black-300">100</span>, security: <span
+                        class="text-black-300">'hardened'</span> &#125;</p>
+                    <p class="pt-1"><span class="text-sky-300">deploy</span>(stack, hosting, metrics)</p>
+                  </div>
 
-                  <button
-                    type="submit"
-                    id="submit-button"
-                    class="contact-submit-btn w-full inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-elevated disabled:opacity-60 disabled:hover:translate-y-0 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition"
-                  >
-                    <span>Send Message</span>
-                    <i data-lucide="send" class="w-4 h-4"></i>
-                  </button>
-                  <p class="text-[10px] text-slate-500">
-                    By submitting, you agree to be contacted regarding your enquiry. I never share
-                    your details with third parties.
-                  </p>
-                </form>
+                  <div class="grid grid-cols-3 gap-2 text-[10px]">
+                    <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
+                      <div class="flex items-center gap-1.5 text-sky-300">
+                        <i data-lucide="zap" class="w-3 h-3"></i>
+                        <span>Performance</span>
+                      </div>
+                      <p class="text-slate-300">Static + CDN + image budgets.</p>
+                    </div>
+                    <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
+                      <div class="flex items-center gap-1.5 text-black-300">
+                        <i data-lucide="shield-check" class="w-3 h-3"></i>
+                        <span>Security</span>
+                      </div>
+                      <p class="text-slate-300">HTTPS, serverless, minimal surface.</p>
+                    </div>
+                    <div class="float-card rounded-xl border border-slate-800 bg-slate-900/80 px-2.5 py-2 space-y-0.5">
+                      <div class="flex items-center gap-1.5 text-sky-200">
+                        <i data-lucide="git-branch" class="w-3 h-3"></i>
+                        <span>Workflow</span>
+                      </div>
+                      <p class="text-slate-300">Git-based, CI-friendly deployments.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
-      <!-- Footer -->
-      <footer class="site-footer border-t border-slate-200 bg-slate-950/95">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div
-            class="footer-shell rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-800 px-5 sm:px-6 py-5 sm:py-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
-          >
-            <div class="flex items-center gap-3">
+      <!-- Services -->
+      <section id="services" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
+            <div class="space-y-3 fade-in-up" data-animate>
+              <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
+                Services
+              </p>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
+                Everything from static sites to full-stack apps &amp; branding.
+              </h2>
+              <p class="text-sm text-slate-600 max-w-2xl">
+                Choose exactly what you need: ultra-fast static websites, conversion-focused
+                Shopify stores, robust applications, social presence, and premium design &
+                editing — all aligned under one strategy.
+              </p>
+            </div>
+            <div class="fade-in-up delay-75" data-animate>
               <div
-                class="h-9 w-9 rounded-xl border border-slate-700 bg-slate-900 flex items-center justify-center shadow-md shadow-slate-900/60"
-              >
-                <img
-                  src="./logo.png"
-                  alt="CSRGO Services Logo"
-                  class="h-5 w-5 object-contain"
-                />
+                class="inline-flex items-center gap-2 rounded-2xl border border-slate-700/80 bg-slate-900/80 px-4 py-2 text-[11px] text-slate-200 shadow-lg/40">
+                <i data-lucide="clock-3" class="w-3.5 h-3.5 text-sky-400"></i>
+                <span>Clear scope, transparent timelines, and honest communication.</span>
               </div>
-              <div class="leading-tight">
-                <p class="text-sm font-semibold text-slate-50">CSRGO Services</p>
-                <p class="text-[11px] text-slate-400">
-                  Static sites • Shopify • Apps • Video &amp; branding
-                </p>
+            </div>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            <!-- Static Website Services -->
+            <article class="service-card fade-in-up" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Static Website Services
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Blazing fast, secure &amp; zero-cost static sites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>Portfolio site creation</li>
+                <li>Landing page development</li>
+                <li>Blog site with Hugo + GitHub Pages + Netlify CMS</li>
+                <li>Serverless, scalable, secure, zero-cost hosting setup</li>
+              </ul>
+              <button class="service-cta" data-service="Static Website Services">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+
+            <!-- Shopify Store Services -->
+            <article class="service-card fade-in-up delay-50" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Shopify Store Services
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Launch or optimize your e-commerce with confidence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>Shopify store setup &amp; theme configuration</li>
+                <li>ROAS-focused Google, Facebook, Instagram integrations</li>
+                <li>Complete automations &amp; flows</li>
+                <li>Payment gateway setup &amp; testing</li>
+                <li>Product upload templates &amp; organization</li>
+              </ul>
+              <button class="service-cta" data-service="Shopify Store Services">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+
+            <!-- Full Application Development -->
+            <article class="service-card fade-in-up delay-100" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Full Application Development
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      From MVP to production-ready full-stack applications.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>Full frontend development (SPA / static-first)</li>
+                <li>Backend APIs &amp; serverless functions</li>
+                <li>Database design &amp; setup</li>
+                <li>Deployment to modern cloud providers</li>
+                <li>CI/CD guidance &amp; automation</li>
+              </ul>
+              <button class="service-cta" data-service="Full Application Development">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+
+            <!-- Application Maintenance -->
+            <article class="service-card fade-in-up" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="wrench" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Application Maintenance
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Keep things running smoothly and always improving.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>Enhancements &amp; new feature development</li>
+                <li>Bug fixes, refactors &amp; stability work</li>
+                <li>UI/UX improvements &amp; design refreshes</li>
+                <li>SEO &amp; performance optimization</li>
+              </ul>
+              <button class="service-cta" data-service="Application Maintenance">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+
+            <!-- Social Media Services -->
+            <article class="service-card fade-in-up delay-50" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="share-2" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Social Media Services
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Build a consistent and professional online presence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>YouTube, Instagram &amp; Facebook setup</li>
+                <li>Branding &amp; channel optimization</li>
+                <li>SEO for videos &amp; social profiles</li>
+                <li>Content pillars &amp; posting guidance</li>
+              </ul>
+              <button class="service-cta" data-service="Social Media Services">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+
+            <!-- Design & Editing Services -->
+            <article class="service-card fade-in-up delay-100" data-animate>
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div class="flex items-center gap-3">
+                  <span class="icon-pill">
+                    <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <h3 class="text-sm font-semibold text-slate-50">
+                      Design &amp; Editing Services
+                    </h3>
+                    <p class="text-[11px] text-slate-400">
+                      Visuals that feel modern, sharp &amp; on-brand.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul class="service-list">
+                <li>Video &amp; reels editing</li>
+                <li>Thumbnails, posters &amp; social creatives</li>
+                <li>Logos, business cards &amp; print assets</li>
+                <li>Kids custom story books</li>
+                <li>Digital brand kits &amp; guidelines</li>
+              </ul>
+              <button class="service-cta" data-service="Design & Editing Services">
+                <span>Contact for this service</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Me -->
+      <section id="why" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] gap-10 lg:gap-14 items-center">
+            <div class="space-y-4 fade-in-up" data-animate>
+              <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
+                Why choose CSRGO
+              </p>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
+                One partner for strategy, design, development &amp; content.
+              </h2>
+              <p class="text-sm text-slate-600">
+                You don’t just get “a website” or “a video edit”. You get a systems thinker who
+                understands platforms, automation, performance and storytelling — and stitches
+                them together into a consistent digital presence.
+              </p>
+              <div class="mt-4 flex flex-wrap items-center gap-3 text-[11px] text-slate-400">
+                <span class="inline-flex items-center gap-1.5">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-sky-400"></i>
+                  Tailored, not template-only.
+                </span>
+                <span class="inline-flex items-center gap-1.5">
+                  <i data-lucide="activity" class="w-3.5 h-3.5 text-emerald-400"></i>
+                  Focused on long-term impact.
+                </span>
               </div>
             </div>
 
-            <div class="flex flex-col gap-4 items-start md:items-end text-[11px]">
-              <div class="flex flex-wrap gap-4 text-slate-300">
-                <a href="#services" class="footer-link">Services</a>
-                <a href="#process" class="footer-link">Process</a>
-                <a href="#contact" class="footer-link">Contact</a>
-              </div>
-            
-              <div class="text-slate-500 space-y-1">
+            <div class="grid sm:grid-cols-2 gap-4 fade-in-up delay-75" data-animate>
+              <div class="why-card">
+                <div class="why-icon">
+                  <i data-lucide="cloud-lightning" class="w-4 h-4"></i>
+                </div>
+                <h3>100% serverless &amp; zero-cost hosting</h3>
                 <p>
-                  &copy; <span id="year"></span> CSRGO Services. All rights reserved.
+                  Architected on GitHub Pages, Netlify, Cloudflare and other serverless platforms
+                  — so your infrastructure bill stays at zero while performance stays high.
+                </p>
+              </div>
+              <div class="why-card">
+                <div class="why-icon">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                </div>
+                <h3>Ultra-fast optimized static sites</h3>
+                <p>
+                  Static-first, CDN-backed deployments with smart image loading, caching and
+                  minimal JavaScript so your pages feel instant on mobile and desktop.
+                </p>
+              </div>
+              <div class="why-card">
+                <div class="why-icon">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+                <h3>Secure by design</h3>
+                <p>
+                  Fewer moving parts, hardened defaults, HTTPS everywhere and best practices
+                  baked in — reducing attack surface and ongoing maintenance.
+                </p>
+              </div>
+              <div class="why-card">
+                <div class="why-icon">
+                  <i data-lucide="layers" class="w-4 h-4"></i>
+                </div>
+                <h3>Custom apps &amp; branding in sync</h3>
+                <p>
+                  Apps, sites, emails, videos and social profiles feel like one unified brand —
+                  not a patchwork of vendors and styles.
+                </p>
+              </div>
+              <div class="why-card sm:col-span-2">
+                <div class="why-icon">
+                  <i data-lucide="palette" class="w-4 h-4"></i>
+                </div>
+                <h3>Branding + Design + Social media solutions</h3>
+                <p>
+                  Visual identity, content guidelines, thumbnails, reels, posts and landing pages
+                  all share the same voice, colors and energy — so you look consistent everywhere.
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+      </section>
 
-    <!-- Main JS -->
-    <script src="./js/main.js"></script>
-  </body>
+      <!-- Process -->
+      <section id="process" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-10">
+            <div class="space-y-3 fade-in-up" data-animate>
+              <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
+                Process
+              </p>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
+                A simple, transparent workflow from idea to launch.
+              </h2>
+              <p class="text-sm text-slate-600 max-w-2xl">
+                Clear check-ins, visual previews and honest recommendations at every stage. You
+                always know what’s happening and what’s next.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stepper -->
+          <div class="relative fade-in-up" data-animate>
+            <div class="hidden md:grid grid-cols-6 gap-5 process-steps">
+              <!-- Horizontal stepper for larger screens -->
+              <!-- Each step -->
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>1</span>
+                </div>
+                <h3>Share your requirements</h3>
+                <p>
+                  We clarify your goals, target audience, platforms and success metrics in simple
+                  language — no tech jargon required.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>2</span>
+                </div>
+                <h3>I plan the structure</h3>
+                <p>
+                  I draft site maps, flows, integrations and a realistic timeline so you know what
+                  we’re building and how it all fits together.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>3</span>
+                </div>
+                <h3>Development starts</h3>
+                <p>
+                  Design, development and automation work in short, focused cycles — with regular
+                  previews you can click and feel.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>4</span>
+                </div>
+                <h3>Review &amp; improvements</h3>
+                <p>
+                  We walk through everything together, polish copy &amp; visuals, and refine flows
+                  until they feel right for your audience.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>5</span>
+                </div>
+                <h3>Deployment</h3>
+                <p>
+                  Your site or app ships to secure, fast, zero-cost infrastructure with custom
+                  domains, analytics and SEO basics configured.
+                </p>
+              </div>
+              <div class="step-card">
+                <div class="step-icon">
+                  <span>6</span>
+                </div>
+                <h3>Ongoing support (optional)</h3>
+                <p>
+                  Choose a light-touch support plan for updates, experiments, new features and
+                  content as your brand grows.
+                </p>
+              </div>
+            </div>
+
+            <!-- Vertical stepper for mobile -->
+            <div class="grid gap-4 md:hidden process-steps-vertical">
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>1</span>
+                </div>
+                <div>
+                  <h3>Share your requirements</h3>
+                  <p>
+                    We clarify your goals, audience, platforms and success metrics — simple, clear
+                    and focused.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>2</span>
+                </div>
+                <div>
+                  <h3>I plan the structure</h3>
+                  <p>
+                    Site map, tech stack, automations and timeline are mapped so we both know the
+                    path forward.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>3</span>
+                </div>
+                <div>
+                  <h3>Development starts</h3>
+                  <p>
+                    Design &amp; build in iterative steps with real previews you can review and
+                    comment on.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>4</span>
+                </div>
+                <div>
+                  <h3>Review &amp; improvements</h3>
+                  <p>
+                    We refine copy, flows, animations and performance until it feels right.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>5</span>
+                </div>
+                <div>
+                  <h3>Deployment</h3>
+                  <p>
+                    Everything is launched to secure, zero-cost hosting with your domain and
+                    tracking set up.
+                  </p>
+                </div>
+              </div>
+              <div class="step-card-vertical">
+                <div class="step-icon">
+                  <span>6</span>
+                </div>
+                <div>
+                  <h3>Ongoing support (optional)</h3>
+                  <p>
+                    Flexible support for tweaks, new ideas, and upcoming campaigns or launches.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] gap-10 lg:gap-14 items-center">
+            <div class="space-y-4 fade-in-up" data-animate>
+              <p class="text-[11px] tracking-[0.25em] uppercase text-sky-500">
+                Contact
+              </p>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900">
+                Tell me what you’re building — I’ll reply with a simple plan.
+              </h2>
+              <p class="text-sm text-slate-600 max-w-xl">
+                Share a quick overview of your idea, current setup (if any), and timelines. I’ll
+                respond with a clear path, suggested stack and rough estimate — no obligation.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div class="contact-highlight">
+                  <div class="contact-icon">
+                    <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p>Free high-level audit</p>
+                    <span>Already have a site or store? I can review it first.</span>
+                  </div>
+                </div>
+                <div class="contact-highlight">
+                  <div class="contact-icon">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p>Flexible collaboration</p>
+                    <span>Project-based, retainers or one-time fixes.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="fade-in-up delay-75" data-animate>
+              <!-- Success message (hidden by default) -->
+              <div id="form-success"
+                class="contact-form-success hidden rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-lg text-center">
+                <div class="success-icon-wrapper mb-4">
+                  <div class="success-icon">
+                    <i data-lucide="check-circle-2" class="w-12 h-12"></i>
+                  </div>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-semibold text-slate-900 mb-2">
+                  Message sent successfully!
+                </h3>
+                <p class="text-sm text-slate-600 mb-4 max-w-md mx-auto">
+                  Thank you for reaching out. I've received your message and will get back to you within 24 hours.
+                </p>
+                <div class="flex items-center justify-center gap-2 text-xs text-slate-500">
+                  <i data-lucide="clock" class="w-4 h-4"></i>
+                  <span>We typically respond within 24 hours</span>
+                </div>
+              </div>
+
+              <form id="contact-form" action="https://formsubmit.co/ajax/contact.csrgo@gmail.com" method="POST"
+                class="contact-form rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-lg space-y-4">
+                <!-- FormSubmit config -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="New enquiry from CSRGO Services website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="" />
+
+                <div class="flex items-center justify-between mb-1">
+                  <h3 class="text-sm font-semibold text-slate-900">
+                    Send a message
+                  </h3>
+                  <span class="inline-flex items-center gap-1 text-[11px] text-slate-500">
+                    <i data-lucide="shield" class="w-3.5 h-3.5 text-sky-500"></i>
+                    <span>Secure &amp; spam-protected</span>
+                  </span>
+                </div>
+                <div
+                  class="email-alternative rounded-xl border border-slate-200 bg-slate-50/50 p-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div class="flex items-center gap-2">
+                    <div class="email-icon-small">
+                      <i data-lucide="mail" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                      <p class="text-[11px] font-medium text-slate-700">Prefer email?</p>
+                      <p class="text-[10px] text-slate-500">Write to us directly</p>
+                    </div>
+                  </div>
+                  <a href="mailto:contact.csrgo@gmail.com?subject=Enquiry from CSRGO Services"
+                    class="email-link inline-flex items-center gap-1.5 text-xs font-semibold text-sky-600 hover:text-sky-500 transition"
+                    rel="noopener noreferrer">
+                    <span>contact.csrgo@gmail.com</span>
+                    <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-3">
+                  <div>
+                    <label for="name" class="field-label">Name</label>
+                    <input type="text" id="name" name="name" required class="field-input"
+                      placeholder="How should I address you?" />
+                  </div>
+                  <div>
+                    <label for="email" class="field-label">Email</label>
+                    <input type="email" id="email" name="email" required class="field-input"
+                      placeholder="you@example.com" />
+                  </div>
+                </div>
+
+                <div>
+                  <label for="phone" class="field-label">Phone (optional)</label>
+                  <input type="tel" id="phone" name="phone" class="field-input" placeholder="+1 555 000 0000" />
+                </div>
+
+                <div>
+                  <label for="message" class="field-label">Project / message</label>
+                  <textarea id="message" name="message" rows="4" required class="field-input resize-none"
+                    placeholder="Tell me about your site, store, app or content needs..."></textarea>
+                </div>
+
+                <!-- Dynamic: service pulled from 'Contact for this service' buttons -->
+                <input type="hidden" id="service-field" name="service" value="General enquiry" />
+
+                <div id="form-status" class="hidden text-[11px] rounded-2xl px-3 py-2 mt-1" role="status"
+                  aria-live="polite"></div>
+
+                <button type="submit" id="submit-button"
+                  class="contact-submit-btn w-full inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-elevated disabled:opacity-60 disabled:hover:translate-y-0 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white transition">
+                  <span>Send Message</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+                <p class="text-[10px] text-slate-500">
+                  By submitting, you agree to be contacted regarding your enquiry. I never share
+                  your details with third parties.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer border-t border-slate-200 bg-slate-950/95">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div
+          class="footer-shell rounded-3xl bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 border border-slate-800 px-5 sm:px-6 py-5 sm:py-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div class="flex items-center gap-3">
+            <div
+              class="h-9 w-9 rounded-xl border border-slate-700 bg-slate-900 flex items-center justify-center shadow-md shadow-slate-900/60">
+              <img src="./logo.png" alt="CSRGO Services Logo" class="h-5 w-5 object-contain" />
+            </div>
+            <div class="leading-tight">
+              <p class="text-sm font-semibold text-slate-50">CSRGO Services</p>
+              <p class="text-[11px] text-slate-400">
+                Static sites • Shopify • Apps • Video &amp; branding
+              </p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-4 items-start md:items-end text-[11px]">
+            <div class="flex flex-wrap gap-4 text-slate-300">
+              <a href="#services" class="footer-link">Services</a>
+              <a href="#process" class="footer-link">Process</a>
+              <a href="#contact" class="footer-link">Contact</a>
+            </div>
+
+            <div class="text-slate-500 space-y-1">
+              <p>
+                &copy; <span id="year"></span> CSRGO Services. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main JS -->
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
-
-
